@@ -1,0 +1,18 @@
+services:
+  app-develop:
+    build: ./site
+    command: ["npm", "run", "develop", "--", "--host=0.0.0.0"]
+    ports:
+      - "8000:8000"
+    x-develop:
+      watch:
+        - action: sync
+          path: ./site/src/
+          target: /app/src
+        - action: sync
+          path: ./site/gatsby-config.js
+          target: /app/gatsby-config.js
+        - action: rebuild
+          path: ./site/package.json
+        - action: rebuild
+          path: ./site/package-lock.json
