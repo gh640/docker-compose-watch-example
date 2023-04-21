@@ -1,5 +1,7 @@
 # `docker compose`'s experimental `watch` example
 
+A working example to test `docker compose`'s experimental `watch`.
+
 ## Usage
 
 ```zsh
