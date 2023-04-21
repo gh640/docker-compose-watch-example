@@ -2,6 +2,12 @@
 
 A working example to test `docker compose`'s experimental `watch`.
 
+> Use `watch` to automatically update your running Compose services as you edit and save your code.
+>
+> For many projects, this enables a hands-off development workflow once Compose is running: services automatically update themselves as you save your work.
+>
+> ―― [Automatically update services with file watch | Docker Documentation](https://docs.docker.com/compose/file-watch/)
+
 ## Usage
 
 ```zsh
