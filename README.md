@@ -74,3 +74,6 @@ The files in `site/` were generated with `npm init gatsby` and `create-gatsby@3.
 - [Automatically update services with file watch | Docker Documentation](https://docs.docker.com/compose/file-watch/)
 - [Docker Compose Experiment: Sync Files and Automatically Rebuild Services with Watch Mode](https://www.docker.com/blog/docker-compose-experiment-sync-files-and-automatically-rebuild-services-with-watch-mode/)
 - [GitHub - dockersamples/avatars: Sample project for the Tilt getting started tutorial](https://github.com/dockersamples/avatars)
+- [2.16.0 | Docker Compose release notes | Docker Documentation](https://docs.docker.com/compose/release-notes/#2160)
+  - 2023-02-08
+  - In this release the experimantal `watch` command was introduced.
