@@ -1,0 +1,6 @@
+.dockerignore
+.gitignore
+.cache
+/Dockerfile
+/node_modules
+/public
