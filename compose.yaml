@@ -1,5 +1,5 @@
 services:
-  app-develop:
+  app:
     build: ./site
     command: ["npm", "run", "develop", "--", "--host=0.0.0.0"]
     ports:
