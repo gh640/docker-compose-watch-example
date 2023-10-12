@@ -1,10 +1,10 @@
-# `docker compose`'s experimental `watch` example
+# `docker compose watch` example
 
-A working example to test `docker compose`'s experimental `watch`.
+A working example to test `docker compose watch`.
 
-> Use `watch` to automatically update your running Compose services as you edit and save your code.
+> Use `watch` to automatically update and preview your running Compose services as you edit and save your code.
 >
-> For many projects, this enables a hands-off development workflow once Compose is running: services automatically update themselves as you save your work.
+> For many projects, this allows for a hands-off development workflow once Compose is running, as services automatically update themselves when you save your work.
 >
 > ―― [Automatically update services with file watch | Docker Documentation](https://docs.docker.com/compose/file-watch/)
 
@@ -21,7 +21,7 @@ docker compose up -d
 open http://localhost:8000
 
 # Watch:
-docker compose alpha watch
+docker compose watch
 
 # Try changing files in `site/src/` or `site/gatsby-config.js` to see the watch works.
 
@@ -33,41 +33,40 @@ docker compose down
 
 ```zsh
 ❯ docker --version
-Docker version 20.10.24, build 297e128
+Docker version 24.0.6, build ed223bc
 
 ❯ docker compose version
-Docker Compose version v2.17.2
+Docker Compose version v2.22.0-desktop.2
 ```
 
 `docker version`:
 
 ```text
 Client:
- Cloud integration: v1.0.31
- Version:           20.10.24
- API version:       1.41
- Go version:        go1.19.7
- Git commit:        297e128
- Built:             Tue Apr  4 18:21:21 2023
+ Cloud integration: v1.0.35+desktop.5
+ Version:           24.0.6
+ API version:       1.43
+ Go version:        go1.20.7
+ Git commit:        ed223bc
+ Built:             Mon Sep  4 12:28:49 2023
  OS/Arch:           darwin/arm64
- Context:           default
- Experimental:      true
+ Context:           desktop-linux
 
-Server: Docker Desktop 4.18.0 (104112)
+Server: Docker Desktop 4.24.0 (122432)
  Engine:
-  Version:          20.10.24
-  API version:      1.41 (minimum version 1.12)
-  Go version:       go1.19.7
-  Git commit:       5d6db84
-  Built:            Tue Apr  4 18:17:07 2023
+  Version:          24.0.6
+  API version:      1.43 (minimum version 1.12)
+  Go version:       go1.20.7
+  Git commit:       1a79695
+  Built:            Mon Sep  4 12:31:36 2023
   OS/Arch:          linux/arm64
   Experimental:     false
  containerd:
-  Version:          1.6.18
-  GitCommit:        2456e983eb9e37e47538f59ea18f2043c9a73640
+  Version:          1.6.22
+  GitCommit:        8165feabfdfe38c65b599c4993d227328c231fca
  runc:
-  Version:          1.1.4
-  GitCommit:        v1.1.4-0-g5fd4c4d
+  Version:          1.1.8
+  GitCommit:        v1.1.8-0-g82f18fe
  docker-init:
   Version:          0.19.0
   GitCommit:        de40ad0
@@ -76,6 +75,16 @@ Server: Docker Desktop 4.18.0 (104112)
 The files in `site/` were generated with `npm init gatsby` and `create-gatsby@3.9.0`.
 
 ## Reference
+
+### GA (Docker Compose `2.22.0`-)
+
+- [Announcing Docker Compose Watch GA Release](https://www.docker.com/blog/announcing-docker-compose-watch-ga-release/)
+- [Docker Desktop 4.24: Compose Watch, Resource Saver, and Docker Engine](https://www.docker.com/blog/docker-desktop-4-24-compose-watch-resource-saver-and-docker-engine/)
+- [2.22.0 | Docker Compose release notes | Docker Documentation](https://docs.docker.com/compose/release-notes/#2220)
+  - 2023-09-21
+  - In this release the `watch` command became GA.
+
+### Experimental (Docker Compose `2.16.0`-`2.21.0`)
 
 - [Automatically update services with file watch | Docker Documentation](https://docs.docker.com/compose/file-watch/)
 - [Docker Compose Experiment: Sync Files and Automatically Rebuild Services with Watch Mode](https://www.docker.com/blog/docker-compose-experiment-sync-files-and-automatically-rebuild-services-with-watch-mode/)
