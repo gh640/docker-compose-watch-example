@@ -12,20 +12,33 @@ A working example to test `docker compose watch`.
 
 ```zsh
 # Build:
+make build
+# or
 docker compose build
 
 # Start containers:
+make up
+# or
 docker compose up -d
 
 # Open the page with browser:
+make open-browser
+# or
 open http://localhost:8000
 
 # Watch:
+make watch
+# or
 docker compose watch
 
 # Try changing files in `site/src/` or `site/gatsby-config.js` to see the watch works.
+make touch-index.js  # => sync
+make touch-gatsby-config.js  # => sync+restart
+make touch-package.json  # => rebuild
 
 # Stop containers:
+make down
+# or 
 docker compose down
 ```
 
@@ -36,7 +49,7 @@ docker compose down
 Docker version 24.0.6, build ed223bc
 
 ❯ docker compose version
-Docker Compose version v2.22.0-desktop.2
+Docker Compose version v2.23.0-desktop.1
 ```
 
 `docker version`:
@@ -52,7 +65,7 @@ Client:
  OS/Arch:           darwin/arm64
  Context:           desktop-linux
 
-Server: Docker Desktop 4.24.0 (122432)
+Server: Docker Desktop 4.25.0 (126437)
  Engine:
   Version:          24.0.6
   API version:      1.43 (minimum version 1.12)
