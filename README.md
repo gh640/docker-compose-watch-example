@@ -36,7 +36,7 @@ docker compose down
 Docker version 24.0.6, build ed223bc
 
 ❯ docker compose version
-Docker Compose version v2.22.0-desktop.2
+Docker Compose version v2.23.0-desktop.1
 ```
 
 `docker version`:
@@ -52,7 +52,7 @@ Client:
  OS/Arch:           darwin/arm64
  Context:           desktop-linux
 
-Server: Docker Desktop 4.24.0 (122432)
+Server: Docker Desktop 4.25.0 (126437)
  Engine:
   Version:          24.0.6
   API version:      1.43 (minimum version 1.12)

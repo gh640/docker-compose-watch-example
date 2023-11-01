@@ -9,10 +9,13 @@ services:
         - action: sync
           path: ./site/src/
           target: /app/src
-        - action: sync
+        # `sync+restart` was introduced in v2.23.0.
+        # See: https://github.com/docker/compose/releases/tag/v2.23.0
+        - action: sync+restart
           path: ./site/gatsby-config.js
           target: /app/gatsby-config.js
         - action: rebuild
           path: ./site/package.json
         - action: rebuild
           path: ./site/package-lock.json
+
