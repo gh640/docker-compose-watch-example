@@ -9,6 +9,9 @@ services:
         - action: sync
           path: ./site/src/
           target: /app/src
+          # `initial_restart` was introduced in v2.39.4.
+          # See: https://docs.docker.com/compose/releases/release-notes/#2394
+          initial_sync: true
         # `sync+restart` was introduced in v2.23.0.
         # See: https://github.com/docker/compose/releases/tag/v2.23.0
         - action: sync+restart
