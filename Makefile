@@ -1,4 +1,4 @@
-.PHONY: build up open-browser watch touch-index.js touch-gatsby-config.js touch-package.json down
+.PHONY: build up open-browser watch touch-index.astro touch-astro-config.mjs touch-package.json down
 
 build:
 	docker compose build
@@ -12,15 +12,14 @@ open-browser:
 watch:
 	docker compose watch
 
-touch-index.js:
-	touch site/src/pages/index.js
+touch-index.astro:
+	touch site/src/pages/index.astro
 
-touch-gatsby-config.js:
-	touch site/gatsby-config.js
+touch-astro-config.mjs:
+	touch site/astro.config.mjs
 
 touch-package.json:
 	touch site/package.json
 
 down:
 	docker compose down
-
