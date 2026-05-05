@@ -1,7 +1,7 @@
 services:
   app:
     build: ./site
-    command: ["npm", "run", "develop", "--", "--host=0.0.0.0"]
+    command: ["npm", "run", "develop"]
     ports:
       - "8000:8000"
     develop:
@@ -9,16 +9,15 @@ services:
         - action: sync
           path: ./site/src/
           target: /app/src
-          # `initial_restart` was introduced in v2.39.4.
+          # `initial_sync` was introduced in v2.39.4.
           # See: https://docs.docker.com/compose/releases/release-notes/#2394
           initial_sync: true
         # `sync+restart` was introduced in v2.23.0.
         # See: https://github.com/docker/compose/releases/tag/v2.23.0
         - action: sync+restart
-          path: ./site/gatsby-config.js
-          target: /app/gatsby-config.js
+          path: ./site/astro.config.mjs
+          target: /app/astro.config.mjs
         - action: rebuild
           path: ./site/package.json
         - action: rebuild
           path: ./site/package-lock.json
-

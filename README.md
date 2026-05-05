@@ -31,9 +31,9 @@ make watch
 # or
 docker compose watch
 
-# Try changing files in `site/src/` or `site/gatsby-config.js` to see the watch works.
-make touch-index.js  # => sync
-make touch-gatsby-config.js  # => sync+restart
+# Try changing files in `site/src/` or `site/astro.config.mjs` to see the watch works.
+make touch-index.astro  # => sync
+make touch-astro-config.mjs  # => sync+restart
 make touch-package.json  # => rebuild
 
 # Stop containers:
@@ -85,7 +85,7 @@ Server: Docker Desktop 4.25.0 (126437)
   GitCommit:        de40ad0
 ```
 
-The files in `site/` were generated with `npm init gatsby` and `create-gatsby@3.9.0`.
+The files in `site/` contain a minimal Astro sample app.
 
 ## Reference
 
